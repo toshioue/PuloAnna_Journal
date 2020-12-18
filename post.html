@@ -1,0 +1,15 @@
+<html>
+<!--POST FORM TEMPLATE FOR DISCUSSION POSTS-->
+<div class=" jumbotron shadow form-group mt-3 border border-dark">
+<h5>Date/Time : <span id="datetime"></span></h5>
+<script>var dt = new Date(); document.getElementById("datetime").innerHTML=dt.toLocaleString();</script>
+<hr>
+<h5>Title: <h5>
+  <input class="form-control-xlg " type="text" id="subj" name="subj" required
+         minlength="5" maxlength="80" style="width:100%;">
+</br></br>
+<label class="h5">Entry:</label>
+<textarea class="form-control"  id="entry" name="entry"  rows="12" style="resize:none; width:100%;" required></textarea><br/>
+<div class="text-center"><button type="submit" id="submitPost" name="submitPost" class="btn btn-lg btn-primary mb-2" onclick="insert()">Submit</button></div>
+</div>
+</html>

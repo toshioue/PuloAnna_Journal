@@ -1,0 +1,125 @@
+html {
+  background: url(img/stars.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: inherit;
+}
+
+.sidenav {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+  transition: 0.2s; /* 0.2 second transition effect to slide in the sidebar */
+  box-shadow: 7px 2px 3px #006699;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #0000FF;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+#close {
+   position: fixed;
+   padding: 0px 5px 0px 5px;
+ }
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+}
+
+/*this @media is meant to adjust font size on phones for card object when viewing entries*/
+@media only screen and (max-width: 450px) {
+  .h3 {font-size: 20px;}
+  .card p {font-size: 15px; margin: auto;}
+  .lead {font-size: 12px;}
+  h4 {font-size: 16px;}
+  #edit, #delete {font-size: 10px;}
+  #side { width: 60px;}
+  #side a {font-size: 8px;}
+  .main {margin-left: 60px;}
+  .display-2 {font-size: 3.0em;}
+
+  /*splash css*/
+}
+/*web icon */
+.bg-icon {
+  background-image: url("img/icon.png");
+  background-position: center;
+  background-size: contain;
+  transition: 0.5s; /* 0.5 second transition effect to decrease icon size */
+
+}
+
+.t-shadow {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+
+#close {
+  display: none;
+  transition: 2.0s /* 1 second to appear before sidebar collapses */
+}
+
+@keyframes move {
+  from {margin-top: 100px;}
+  to {margin-top: 5px;}
+}
+
+/* makes quote animate upwards slowly effect */
+.move {
+   animation-name: move;
+   animation-duration: 2s;
+}
+/* hovering shadow effect for cards containing entries for view */
+.shadow {
+   box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* to separate edit and delete button*/
+#delete {margin-left: 5px;}
+
+
+
+/*any CSS below this is for splash.php */
+#splash h1 {
+  text-shadow: 8px 2px #000000
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.btn-color {background-color: #99ccff;}
+
+.btn-color:hover {background-color: #007bff;}

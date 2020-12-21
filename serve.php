@@ -2,7 +2,7 @@
 //connect to db and insert
 class MyDB extends SQLite3 {
     function __construct() {
-       $this->open('entries.db');
+       $this->open('entries.db'); //change to the name of db via SQLite
     }
  }
 
